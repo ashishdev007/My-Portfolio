@@ -9,17 +9,23 @@ import Projects from "./projects.jsx";
 import Learn from "./learn.jsx";
 
 class App extends Component {
-    state = {};
+    state = { transparentNav: false };
 
     componentDidMount() {
         window.addEventListener("scroll", () => {
-            console.log("Scroll");
+            if (window.scrollY < 45) {
+                if (this.state.transparentNav) {
+                    this.setState({ transparentNav: false });
+                }
+            } else if (!this.state.transparentNav) {
+                this.setState({ transparentNav: true });
+            }
         });
     }
     render() {
         return (
             <React.Fragment>
-                <Navbar />
+                <Navbar transparent={this.state.transparentNav} />
                 <div id="content">
                     <div className="ui container">
                         <div className="ui grid">
