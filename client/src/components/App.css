@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap");
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: rgb(247, 245, 245);
 }

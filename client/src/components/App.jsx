@@ -11,6 +11,8 @@ import Learn from "./learn.jsx";
 class App extends Component {
     state = { transparentNav: false };
 
+    about = React.createRef();
+
     componentDidMount() {
         window.addEventListener("scroll", () => {
             if (window.scrollY < 45) {
@@ -22,16 +24,24 @@ class App extends Component {
             }
         });
     }
+
+    scrollTo = () => {
+        console.log(this.about);
+        this.about.current.scrollIntoView({ behavior: "smooth" });
+    };
     render() {
         return (
             <React.Fragment>
-                <Navbar transparent={this.state.transparentNav} />
+                <Navbar
+                    transparent={this.state.transparentNav}
+                    scrollTo={this.scrollTo}
+                />
                 <div id="content">
                     <div className="ui container">
                         <div className="ui grid">
                             <Salut />
 
-                            <About />
+                            <About ref={this.about} />
 
                             <div className="row subHeader">
                                 <div className="column">

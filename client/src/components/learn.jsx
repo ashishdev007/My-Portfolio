@@ -4,7 +4,7 @@ class Learn extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className="row sectionHeader">
+                <div name="contact" className="row sectionHeader">
                     <div className="sixteen wide column">
                         <h1 className="ui huge header center aligned">
                             Learn More

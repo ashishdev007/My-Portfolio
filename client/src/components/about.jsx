@@ -4,7 +4,7 @@ class About extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className="row sectionHeader">
+                <div name="about" className="row sectionHeader">
                     <div className="sixteen wide column">
                         <h1 className="ui huge header center aligned">
                             About Me
