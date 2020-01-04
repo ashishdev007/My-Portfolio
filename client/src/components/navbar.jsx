@@ -2,19 +2,27 @@ import React, { Component } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 class Navbar extends Component {
-    state = { active: 1 };
+    state = { activeItem: "home" };
 
     changeActive = no => {
-        this.setState({ active: no });
+        // this.setState({ activeItem: no });
     };
 
-    isActive = navNo => {
-        if (navNo === this.state.active) {
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps !== this.props) {
+            this.setState({ activeItem: this.props.activeItem });
+        }
+        console.log(this.props.activeItem);
+    }
+
+    isActive = item => {
+        if (item === this.state.activeItem) {
             return "active item";
         }
 
         return "item";
     };
+
     render() {
         return (
             <div
@@ -31,9 +39,9 @@ class Navbar extends Component {
                 <div className="ui container">
                     <div className="right menu">
                         <Link
-                            className={this.isActive(1)}
+                            to="home"
+                            className={this.isActive("home")}
                             onClick={() => {
-                                scroll.scrollToTop();
                                 this.changeActive(1);
                             }}
                         >
@@ -42,9 +50,9 @@ class Navbar extends Component {
                         <Link
                             to="about"
                             smooth={true}
-                            duration={800}
+                            duration={400}
                             offset={-70}
-                            className={this.isActive(2)}
+                            className={this.isActive("about")}
                             onClick={() => this.changeActive(2)}
                         >
                             About
@@ -52,9 +60,9 @@ class Navbar extends Component {
                         <Link
                             to="projects"
                             smooth={true}
-                            duration={800}
+                            duration={400}
                             offset={-70}
-                            className={this.isActive(3)}
+                            className={this.isActive("projects")}
                             onClick={() => this.changeActive(3)}
                         >
                             Projects
@@ -62,9 +70,9 @@ class Navbar extends Component {
                         <Link
                             to="contact"
                             smooth={true}
-                            duration={800}
+                            duration={400}
                             offset={-70}
-                            className={this.isActive(4)}
+                            className={this.isActive("contact")}
                             onClick={() => this.changeActive(4)}
                         >
                             Contact

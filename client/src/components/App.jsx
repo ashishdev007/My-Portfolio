@@ -9,7 +9,7 @@ import Projects from "./projects.jsx";
 import Learn from "./learn.jsx";
 
 class App extends Component {
-    state = { transparentNav: false };
+    state = { transparentNav: false, activeSegment: "home" };
 
     about = React.createRef();
 
@@ -23,25 +23,30 @@ class App extends Component {
                 this.setState({ transparentNav: true });
             }
         });
+
+        console.log(this.about);
     }
 
-    scrollTo = () => {
-        console.log(this.about);
-        this.about.current.scrollIntoView({ behavior: "smooth" });
+    segmentChange = (segment, isVisible) => {
+        if (isVisible) {
+            console.log(segment + " is " + isVisible);
+            this.setState({ activeSegment: segment });
+        }
     };
+
     render() {
         return (
             <React.Fragment>
-                <Navbar
+                {/* <Navbar
                     transparent={this.state.transparentNav}
-                    scrollTo={this.scrollTo}
-                />
+                    activeItem={this.state.activeSegment}
+                /> */}
                 <div id="content">
                     <div className="ui container">
                         <div className="ui grid">
-                            <Salut />
+                            <Salut segmentChange={this.segmentChange} />
 
-                            <About ref={this.about} />
+                            <About segmentChange={this.segmentChange} />
 
                             <div className="row subHeader">
                                 <div className="column">
@@ -51,15 +56,15 @@ class App extends Component {
                                     </h2>
                                 </div>
                             </div>
-                            <Skills />
+                            <Skills segmentChange={this.segmentChange} />
 
-                            <Projects />
-                            <Learn />
+                            <Projects segmentChange={this.segmentChange} />
+                            <Learn segmentChange={this.segmentChange} />
                         </div>
                     </div>
                 </div>
 
-                <div id="footer">
+                <div id="footer" ref={this.about}>
                     <div className="ui center aligned">
                         <p>
                             <em>
