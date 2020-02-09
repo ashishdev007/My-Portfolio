@@ -89,9 +89,11 @@ h1 {
 
 /* Project Boxes */
 .project {
-    height: 35vh;
+    min-height: 250px;
+    display: flex;
 }
 .project > .items {
+    margin: auto;
     height: 100%;
 }
 .project > .items > .item {

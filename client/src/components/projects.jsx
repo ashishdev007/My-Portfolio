@@ -20,38 +20,41 @@ class Projects extends Component {
                     </div>
                     <div className="row">
                         <div className="eight wide column">
-                            <div className="ui rounded segment project">
-                                <div className="ui items">
-                                    <div className="ui item">
-                                        <div className="image">
-                                            <img
-                                                className="ui rounded image"
-                                                src={require("./shopping.png")}
-                                            />
-                                        </div>
-                                        <div className="content">
-                                            <a className="header">Header</a>
-                                            <div className="meta">
-                                                <span>Description</span>
+                            <div className="ui rounded segment ">
+                                <div className="project">
+                                    <div className="ui items">
+                                        <div className="ui item">
+                                            <div className="image">
+                                                <img
+                                                    className="ui rounded image"
+                                                    src={require("./shopping.png")}
+                                                />
                                             </div>
-                                            <div className="description">
-                                                <p>
-                                                    Lorem Ipsum has been the
-                                                    industry's standard dummy
-                                                    text ever since the 1500s,
-                                                    when an unknown printer took
-                                                    a galley of type and
-                                                    scrambled it to make a type
-                                                    specimen book. It has
-                                                    survived not only five
-                                                    centuries, but also the leap
-                                                    into electronic typesetting,
-                                                    remaining essentially
-                                                    unchanged.
-                                                </p>
-                                            </div>
-                                            <div className="extra">
-                                                Additional Details
+                                            <div className="content">
+                                                <a className="header">Header</a>
+                                                <div className="meta">
+                                                    <span>Description</span>
+                                                </div>
+                                                <div className="description">
+                                                    <p>
+                                                        Lorem Ipsum has been the
+                                                        industry's standard
+                                                        dummy text ever since
+                                                        the 1500s, when an
+                                                        unknown printer took a
+                                                        galley of type and
+                                                        scrambled it to make a
+                                                        type specimen book. It
+                                                        has survived not only
+                                                        five centuries, but also
+                                                        the leap into electronic
+                                                        typesetting, remaining
+                                                        essentially unchanged.
+                                                    </p>
+                                                </div>
+                                                <div className="extra">
+                                                    Additional Details
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
