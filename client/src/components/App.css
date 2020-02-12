@@ -145,8 +145,9 @@ h1 {
 #learnMore > .column {
   text-align: center;
 }
-#learnMore > .column > i {
+#learnMore > .column > a > i {
   font-size: 4em;
+  color: #202020;
 }
 
 /* Footer */
