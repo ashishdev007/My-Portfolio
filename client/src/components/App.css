@@ -112,7 +112,7 @@ h1 {
 
 .project > .content > .header {
   color: rgba(0, 0, 0, 0.85);
-  font-size: 1.28em;
+  font-size: 1.5em;
   font-weight: 700;
 }
 
@@ -135,6 +135,21 @@ h1 {
 
 .project > .items > .item > .image > img {
   margin: auto;
+}
+
+.project > .content > .description {
+  margin: 0.7em 0;
+}
+.project > .content > .description > p {
+  margin-bottom: 0.7em;
+}
+
+.meta > a {
+  cursor: pointer;
+}
+
+.code .icon {
+  font-weight: 300;
 }
 
 /* Learn More */
