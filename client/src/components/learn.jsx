@@ -34,7 +34,10 @@ class Learn extends Component {
               </a>
             </div>
             <div className="four wide column">
-              <a href="" target="_blank">
+              <a
+                href="https://drive.google.com/file/d/14JJaBibGJyjoze4pX_xHAbDxmbfcbWxh/view?usp=sharing"
+                target="_blank"
+              >
                 <i className="file alternate icon"></i>
               </a>
             </div>

@@ -8,7 +8,7 @@ class About extends Component {
         onChange={isVisible => this.props.segmentChange('about', isVisible)}
       >
         <React.Fragment>
-          <div name="about" className="row sectionHeader">
+          <div id="about" name="about" className="row sectionHeader">
             <div className="sixteen wide column">
               <h1 className="ui huge header center aligned">About Me</h1>
               <div className="ui divider"></div>
